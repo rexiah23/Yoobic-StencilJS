@@ -17,8 +17,10 @@ export class ArrayGrid {
     }
 
     return (
-      <div class="grid-container">
-       {gridItems}
+      <div>
+        <ul>
+          {gridItems}
+        </ul>
       </div>
     )
   }
