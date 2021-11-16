@@ -7,14 +7,17 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class ArrayGrid {
 
-  @Prop() itemsArray: string[];
+  @Prop() itemsArray: string;
 
   render() {
-    const parsedItems = JSON.parse(document.querySelector('array-grid').getAttribute('items-array'));
-    const gridItems = parsedItems.map(item => <span>{item}</span>);
+    let gridItems = <span></span>
+    if (this.itemsArray) {
+      const parsedItems = JSON.parse(this.itemsArray);
+      gridItems = parsedItems.map((item: string) => <span>{item}</span>);
+    }
 
     return (
-      <div>
+      <div class="grid-container">
        {gridItems}
       </div>
     )
