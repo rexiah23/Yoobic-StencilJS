@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'array-grid',
@@ -9,10 +9,12 @@ export class ArrayGrid {
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
-    );
+      <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
+    )
   }
 
 }
