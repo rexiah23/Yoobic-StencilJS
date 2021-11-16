@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'array-grid',
@@ -7,14 +7,16 @@ import { Component, h } from '@stencil/core';
 })
 export class ArrayGrid {
 
+  @Prop() itemsArray: string[];
+
   render() {
+    const parsedItems = JSON.parse(document.querySelector('array-grid').getAttribute('items-array'));
+    const gridItems = parsedItems.map(item => <span>{item}</span>);
+
     return (
       <div>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
+       {gridItems}
       </div>
     )
   }
-
 }

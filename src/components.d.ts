@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ArrayGrid {
+        "itemsArray": string[];
     }
 }
 declare global {
@@ -22,6 +23,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ArrayGrid {
+        "itemsArray"?: string[];
     }
     interface IntrinsicElements {
         "array-grid": ArrayGrid;
