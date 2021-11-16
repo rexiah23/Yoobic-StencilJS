@@ -13,11 +13,11 @@ export class ArrayGrid {
     let gridItems = <span></span>
     if (this.itemsArray) {
       const parsedItems = JSON.parse(this.itemsArray);
-      gridItems = parsedItems.map((item: string) => <span>{item}</span>);
+      gridItems = parsedItems.map((item: string) => <div class="grid-item">{item}</div>);
     }
 
     return (
-      <div>
+      <div class="grid-container">
         <ul>
           {gridItems}
         </ul>
